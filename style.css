@@ -6,11 +6,410 @@ Google Font
 /* -----------------------------------
 Utility And Global CSS Style 
 -------------------------------------*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
+}
+
+section {
+    margin: 50px 0px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.primary-btn {
+    background-color: #E02C6D;
+    color: #fff;
+    padding: 10px 24px 10px 24px;
+    width: fit-content;
+    border-radius: 40px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: #d52d6b
+}
+
+.section-title {
+    margin: 50px 0px;
+    text-align: center;
+}
+
+/* -----------------------------------
+Header CSS Style 
+-------------------------------------*/
+header {
+    height: 100vh;
+}
+
+/* Navigation CSS Style */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.menu-show {
+    display: none;
+}
+
+.menu-hide {
+    display: none;
+}
+
+.menu-cart {
+    display: none;
+}
+
+.nav-menu {
+    display: block;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-weight: 500;
+}
+
+.nav-menu li:hover {
+    color: #E02C6D;
+    cursor: pointer;
+}
+
+.nav-menu li {
+    font-size: 18px;
+}
+
+/* Header Banner CSS Style */
+.header-banner {
+    display: flex;
+}
+
+.header-banner h1 {
+    font-size: 3.5em;
+}
+
+.header-banner>div {
+    flex: 1;
+}
+
+.header-banner .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.header-banner .banner-img {
+    background-image: url(images/Circle-design.svg);
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.partner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    border: 1px solid lightgray;
+    padding: 30px 0px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.featured-products a {
+    color: #E02C6DDE;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: right;
+    display: block;
+    margin-right: 55px;
+    margin-top: 50px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-row-gap: 20px;
+}
+
+.product {
+    width: 330px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.product-info {
+    color: #787885;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.product-name {
+    font-weight: 500;
+    font-size: 28px;
+    color: #000;
+}
+
+.product-price {
+    font-size: 24px;
+    color: #000;
+    font-weight: 400;
+}
+
+.product-rating i {
+    color: #FB8200;
+    font-size: 12px;
+}
+
+.hero {
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    ;
+}
+
+.hero-content button {
+    border-radius: 5px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    background-color: #0A0826;
+    color: #D9DBE1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+footer i {
+    background-color: #37373c;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+footer i:hover {
+    background-color: #E02C6D;
+}
+
+@media (max-width:576px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        background-color: #E02C6D;
+        height: 100vh;
+        padding: 50px;
+        color: #fff;
+    }
+
+    .menu-hide {
+        display: block;
+    }
+
+    .menu-show {
+        display: block;
+    }
+
+    .menu-cart {
+        display: block;
+    }
+
+    header {
+        height: 100%;
+    }
+
+    .header-banner {
+        flex-direction: column-reverse;
+    }
+
+    .header-banner img {
+        width: 70%;
+    }
+
+    .header-banner h1 {
+        font-size: 2em;
+    }
+
+    .banner-img {
+        background-size: 100px;
+    }
+
+    .partner {
+        height: 100%;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:577px) and (max-width:768px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        background-color: #E02C6D;
+        height: 100vh;
+        padding: 50px;
+        color: #fff;
+    }
+
+    .menu-hide {
+        display: block;
+    }
+
+    .menu-show {
+        display: block;
+    }
+
+    .menu-cart {
+        display: block;
+    }
+
+    header {
+        height: 100%;
+    }
+
+    .header-banner {
+        flex-direction: column-reverse;
+    }
+
+    .header-banner img {
+        width: 70%;
+    }
+
+    .header-banner h1 {
+        font-size: 2em;
+    }
+
+    .banner-img {
+        background-size: 100px;
+    }
+
+    .partner {
+        height: 100%;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+}
+
+@media (min-width:769px) and (max-width:992px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+    .menu-show {
+        display: none;
+    }
+    .menu-hide {
+        display: none;
+    }
+    .menu-cart {
+        display: none;
+    }
+
+    header {
+        height: 100%;
+    }
+
+    .header-banner {
+        flex-direction: column-reverse;
+    }
+
+    .header-banner img {
+        width: 70%;
+    }
+
+    .header-banner h1 {
+        font-size: 2em;
+    }
+
+    .banner-img {
+        background-size: 100px;
+    }
+
+    .partner {
+        height: 100%;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+    }
 }
